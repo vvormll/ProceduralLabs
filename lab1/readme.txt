@@ -1,8 +1,13 @@
 Compile using:
 gcc --std=c89 -Wall -Werror file.c
 
-Tested on:
+Tested with clang:
 Apple LLVM version 8.1.0 (clang-802.0.42)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+
+and with gcc:
+gcc version 7.2.0 (Homebrew GCC 7.2.0)
 Target: x86_64-apple-darwin16.7.0
 Thread model: posix
 
