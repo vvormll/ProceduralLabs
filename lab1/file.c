@@ -1,31 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 
 #define LOWEST_KELVIN 0
 #define LOWEST_CELSIUS -273.15
 #define LOWEST_FAHRENHEIT -459.67
 
 float fahrenheitToCelsius(float degrees) {
+	assert(degrees >= LOWEST_FAHRENHEIT);
 	return (degrees - 32) * 5 / 9;
 }
 
 float fahrenheitToKelvin(float degrees) {
+	assert(degrees >= LOWEST_FAHRENHEIT);
 	return (degrees + 459.67) * 5 / 9;
 }
 
 float celsiusToFahrenheit(float degrees) {
+	assert(degrees >= LOWEST_CELSIUS);
 	return degrees * 9 / 5 + 32;
 }
 
 float celsiusToKelvin(float degrees) {
+	assert(degrees >= LOWEST_CELSIUS);
 	return degrees + 273.15;
 }
 
 float kelvinToCelsius(float degrees) {
+	assert(degrees >= LOWEST_KELVIN);
 	return degrees - 273.15;
 }
 
 float kelvinToFahrenheit(float degrees) {
+	assert(degrees >= LOWEST_KELVIN);
 	return degrees * 9 / 5 - 459.67;
 }
 
